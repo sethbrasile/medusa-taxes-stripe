@@ -49,7 +49,7 @@ Add `STRIPE_API_KEY` and `STRIPE_WEBHOOK_SECRET` to your env vars and add the fo
 },
 ```
 
-_Note:_ Stripe doesn't calculate taxes in its test environment, so you likely need to pass a production api key to this plugin if you want to see it work in your dev env.
+_Note: Stripe doesn't calculate taxes in its test environment, so you likely need to pass a production api key to this plugin if you want to see it work in your dev env._
 
 ## Compatibility
 
