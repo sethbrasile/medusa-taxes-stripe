@@ -37,16 +37,19 @@
 
 ## Configuration
 
-Add the following to the `plugins` array in `medusa-config.js`:
+Add `STRIPE_API_KEY` and `STRIPE_WEBHOOK_SECRET` to your env vars and add the following to the `plugins` array in `medusa-config.js`:
 
 ```js
 {
   resolve: `medusa-taxes-stripe`,
   options: {
     stripeApiKey: process.env.STRIPE_API_KEY,
+    webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
   },
 },
 ```
+
+_Note:_ Stripe doesn't calculate taxes in its test environment, so you likely need to pass a production api key to this plugin if you want to see it work in your dev env.
 
 ## Compatibility
 
